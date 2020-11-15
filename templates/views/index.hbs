@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="icon" href="/image/could.png">
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        <p id ="id">Use this site to get your weather. </p>
+
+        <form>
+            <input id="input" type="text" placeholder="Location">
+            <button id='Search'>Submit</button>
+        </form>
+        
+        <p id="message-one"></p>
+        <p id="message-two"></p>
+        
+    </div>
+   
+      {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+</html>
