@@ -1,6 +1,6 @@
- const change = document.getElementById('id').addEventListener('click',() => {
-     alert("Clicked!...");
-// })
+//  const change = document.getElementById('id').addEventListener('click',() => {
+//      alert("Clicked!...");
+//  })
 /*
 fetch('http://puzzle.mead.io/puzzle').then((response) => {
     response.json().then((data) => {
