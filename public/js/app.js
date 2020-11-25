@@ -37,13 +37,23 @@ weatherData.addEventListener('submit', (e) =>{
    // console.log(location);
    fetch('/weather?address=' + location).then((response) => {
     response.json().then((data) => {
-       // let output;
+        //let output;
         if(data.error){
             messageone.textContent = data.error;
         }else{
+            
             messageone.textContent = data.forecast;
             messagetwo.textContent = data.location;
+             /*
+           output += `
+           <p>Description : ${data.description}</p>
+           <p>Humidity : ${data.humidity}</p>
+           <p>WindSpeed : ${data.windspeed}</p>
+           <p>Could : ${data.Could}</p>
+           `
+           */
             }
+           // insert.innerHTML = output;
         })
         
     })

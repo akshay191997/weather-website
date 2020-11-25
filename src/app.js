@@ -24,19 +24,19 @@ app.use(express.static(publicPath));
 app.get('',(req,res) => {
     res.render('index',{
         title : " Weather App",
-        name : "Andrew Mead"
+        name : "Akshay"
     });
 })
 app.get('/about',(req,res) => {
     res.render('about',{
         title : "About Me",
-        name:"Andre Mead"
+        name:"Akshay"
     })
 })
 app.get('/help',(req,res) => {
     res.render('help',{
         title:"Help Page",
-        name:"Andrew Mead"
+        name:"Akshay"
     })
 })
 
@@ -56,16 +56,18 @@ app.get('/weather' ,(req,res) => {
         }
         console.log(longitude, latitude);
         forecast(latitude, longitude, (error,forecastData) => {
-            console.log(forecastData)
+           // console.log(forecastData)
             if(error){
               return res.send({error})
             }
             res.send({
-                forecast:forecastData,
-                location,
-                address: req.query.address
+                 forecast :forecastData,
+                 location :location,
+                 address:req.query.address
             })
+            //console.log(humidity)
             console.log(req.query.address)
+            console.log(location)
         })
         
         //
